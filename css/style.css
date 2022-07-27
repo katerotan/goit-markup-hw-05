@@ -844,3 +844,8 @@ body {
   color: #000000;
   background-color: #ffffff;
 }
+.btn-close {
+  fill: currentColor;
+  width: 11px;
+  height: 11px;
+}
