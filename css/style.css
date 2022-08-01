@@ -124,7 +124,7 @@ body {
   color: var(--link-color);
   position: relative;
 
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); /*сolor*/
 }
 
 .header-nav-link::after {
@@ -135,16 +135,16 @@ body {
   left: 0;
   right: 0;
 
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  background-color: transparent;
+  color: transparent;
   height: 4px;
   border-radius: 2px;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); /*color*/
 }
 
 .header-nav-link:hover::after,
 .header-nav-link:focus::after {
-  background-color: var(--button-background-order);
+  color: var(--button-background-order);
 }
 
 .current-page {
@@ -187,7 +187,7 @@ body {
   padding-bottom: 32px;
   align-items: center;
 
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); /*color*/
 }
 
 /*КОНВЕРТ*/
@@ -264,7 +264,7 @@ body {
   line-height: 24px;
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-address-link:hover,
@@ -309,7 +309,7 @@ body {
   height: 44px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.1);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .webstudio-social-icon {
   display: block;
@@ -587,7 +587,8 @@ body {
   background-color: #ffffff;
   color: #afb1b8;
 
-  transition: 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 1000ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 1000ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icon {
@@ -651,7 +652,7 @@ body {
   width: 170px;
   height: 92px;
 
-  transition: 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 1000ms cubic-bezier(0.4, 0, 0.2, 1), border 1000ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-icon {
@@ -822,13 +823,14 @@ body {
   z-index: 1;
 
   opacity: 1;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 1000ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 1000ms cubic-bezier(0.4, 0, 0.2, 1), transform 1000ms cubic-bezier(0.4, 0, 0.2, 1); /*все три свойства*/
 }
 
 .is-hidden {
   opacity: 0;
   pointer-events: none;
-  visibility: visible;
+  visibility: hidden;
   transform: scale(0.9);
 }
 
